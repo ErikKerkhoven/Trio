@@ -85,7 +85,6 @@ platform :ios do
       app_identifier: [
         "#{BUNDLE_ID}",
         "#{BUNDLE_ID}.watchkitapp",
-        "#{BUNDLE_ID}.watchkitapp.TrioWatchComplication",
         "#{BUNDLE_ID}.LiveActivity"
 
       ]
@@ -109,12 +108,6 @@ platform :ios do
       targets: ["Trio Watch App"]
     )
 
-    update_code_signing_settings(
-      path: "#{GITHUB_WORKSPACE}/Trio.xcodeproj",
-      profile_name: mapping["#{BUNDLE_ID}.watchkitapp.TrioWatchComplication"],
-      code_sign_identity: "iPhone Distribution",
-      targets: ["Trio Watch Complication Extension"]
-    )
 
     update_code_signing_settings(
       path: "#{GITHUB_WORKSPACE}/Trio.xcodeproj",
