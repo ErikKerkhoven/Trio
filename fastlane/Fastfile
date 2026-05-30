@@ -85,7 +85,6 @@ platform :ios do
       app_identifier: [
         "#{BUNDLE_ID}",
         "#{BUNDLE_ID}.watchkitapp",
-        "#{BUNDLE_ID}.watchkitapp.TrioWatchComplication",
         "#{BUNDLE_ID}.LiveActivity"
 
       ]
@@ -180,9 +179,6 @@ platform :ios do
       Spaceship::ConnectAPI::BundleIdCapability::Type::PUSH_NOTIFICATIONS
     ])
 
-    configure_bundle_id("Trio Watch Complication", "#{BUNDLE_ID}.watchkitapp.TrioWatchComplication", [
-      Spaceship::ConnectAPI::BundleIdCapability::Type::APP_GROUPS
-    ])
     
     configure_bundle_id("Trio Watch App", "#{BUNDLE_ID}.watchkitapp", [
       Spaceship::ConnectAPI::BundleIdCapability::Type::APP_GROUPS,
@@ -213,7 +209,6 @@ platform :ios do
       app_identifier: [
         "#{BUNDLE_ID}",
         "#{BUNDLE_ID}.watchkitapp",
-        "#{BUNDLE_ID}.watchkitapp.TrioWatchComplication",
         "#{BUNDLE_ID}.LiveActivity"
       ]
     )
